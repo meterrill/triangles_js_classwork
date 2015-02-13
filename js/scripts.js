@@ -1,9 +1,12 @@
 var triType = function(side1, side2, side3) {
   var type = null
-  if (side1 + side2 < side3 || side2 + side3 < side1 || side1 + side3 < side2) {
+  if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
+    alert("Enter all 3 sides!");
+    end;
+  } else if (side1 + side2 < side3 || side2 + side3 < side1 || side1 + side3 < side2) {
     type = "Not a Valid Triangle!";
   } else {
-  return (side1 === side2 && side2 === side3) && 'Equilateral' ||
+    return (side1 === side2 && side2 === side3) && 'Equilateral' ||
     (side1 === side2 || side1 === side3 || side2 === side3) && 'Isosceles' ||
     'Scalene';
   }
