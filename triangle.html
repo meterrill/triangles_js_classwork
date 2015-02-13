@@ -11,22 +11,26 @@
     <div class="container">
       <h1>Triangle Type</h1>
       <form id="tri_input">
-        <div class="form-group">
-          <label for="side_1">Side 1</label>
+        <div class="form-group ">
+          <label for="side_1" class="control-label" for="side_1">Side 1</label>
           <input id="side_1" type="text" class="form-control" placeholder="Side 1">
 
-          <label for="side_2">Side 2</label>
-          <input id="side_2" type="text" class="form-control" placeholder="Side 2">
+          <label for="side_2" class="control-label">Side 2</label>
+          <input id="side_2" type="text" class="form-control" for="side_2" placeholder="Side 2">
 
-          <label for="side_3">Side 3</label>
-          <input id="side_3" type="text" class="form-control" placeholder="Side 3">
+          <label for="side_3" class="control-label">Side 3</label>
+          <input id="side_3" type="text" class="form-control" for="side_3" placeholder="Side 3">
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Find out!</button>
       </form>
       <br>
+      </br>
       <div id="results">
-        <span class="result"</span>
+        <span class="result alert alert-success"</span>
+      </div>
+      <div id="errors">
+        <span class="error alert alert-danger"</span>
       </div>
     </div>
   </body>

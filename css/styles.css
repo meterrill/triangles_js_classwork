@@ -1,1 +1,6 @@
-
+#results{
+  display:none;
+}
+#errors{
+  display:none;
+}
