@@ -1,16 +1,26 @@
 var triType = function(side1, side2, side3) {
   var type = null
-  if (side1 === side2 && side2 === side3) {
-    type = "Equilateral"
-  } else if ((side1 + side2 >= side3 && side2 + side3 >= side1 && side1 + side3 >= side2) && (side1 === side2 || side2 === side3 || side1 === side3)) {
-    type = "Isosceles"
-  } else if (side1 + side2 >= side3 && side2 + side3 >= side1 && side1 + side3 >= side2) {
-    type = "Scalene"
+  if (side1 + side2 < side3 || side2 + side3 < side1 || side1 + side3 < side2) {
+    type = "Not a Valid Triangle!";
   } else {
-    type = "Not a Valid Triangle!"
+  return (side1 === side2 && side2 === side3) && 'Equilateral' ||
+    (side1 === side2 || side1 === side3 || side2 === side3) && 'Isosceles' ||
+    'Scalene';
   }
   return type;
 };
+//   if (side1 === side2 && side2 === side3) {
+//     type = "Equilateral"
+//   } else if ((side1 + side2 >= side3 && side2 + side3 >= side1 && side1 + side3 >= side2) && (side1 === side2 || side2 === side3 || side1 === side3)) {
+//     type = "Isosceles"
+//   } else if (side1 + side2 >= side3 && side2 + side3 >= side1 && side1 + side3 >= side2) {
+//     type = "Scalene"
+//   } else {
+//     type = "Not a Valid Triangle!"
+//   }
+//   return type;
+// };
+
 
 $(document).ready(function() {
   $("form#tri_input").submit(function(event) {
