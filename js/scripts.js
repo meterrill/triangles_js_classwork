@@ -1,7 +1,7 @@
 var triType = function(side1, side2, side3) {
   return (side1 === side2 && side2 === side3) && 'Equilateral' ||
-    (side1 === side2 || side1 === side3 || side2 === side3) && 'Isosceles' ||
-    'Scalene';
+  (side1 === side2 || side1 === side3 || side2 === side3) && 'Isosceles' ||
+  'Scalene';
 };
 
 $(document).ready(function() {
