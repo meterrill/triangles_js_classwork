@@ -7,9 +7,9 @@ var triType = function(side1, side2, side3) {
 $(document).ready(function() {
   $("form#tri_input").submit(function(event) {
 
-    var side1 = parseInt($('input#side_1').val());
-    var side2 = parseInt($('input#side_2').val());
-    var side3 = parseInt($('input#side_3').val());
+    var side1 = parseFloat($('input#side_1').val());
+    var side2 = parseFloat($('input#side_2').val());
+    var side3 = parseFloat($('input#side_3').val());
 
     if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
       $(".error").text("All 3 sides must be present and in numerical form!");
