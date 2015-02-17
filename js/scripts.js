@@ -20,13 +20,13 @@ $(document).ready(function() {
     var result = triType(side1, side2, side3);
 
     if (result === "Not A Valid Triangle!") {
-      $(".error").append('<strong> Warning! </strong>' + result);
-      $(".error").show();
       $(".result").hide();
+      $(".error").text(result);
+      $(".error").show();
     } else {
-      $(".result").append('<strong> Success! </strong>' + 'Your triangle type is:' + result);
-      $(".result").show();
       $(".error").hide();
+      $(".result").text(result);
+      $(".result").show();
     }
     $("#results").show();
   });
