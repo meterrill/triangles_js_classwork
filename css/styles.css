@@ -1,6 +1,9 @@
 #results{
   display:none;
 }
-#errors{
+#error{
+  display:none;
+}
+#result{
   display:none;
 }

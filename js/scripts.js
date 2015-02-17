@@ -1,5 +1,6 @@
 var triType = function(side1, side2, side3) {
-  if ((isNaN(side1) || isNaN(side2) || isNaN(side3)) || (side1 + side2 <= side3 || side2 + side3 <= side1 || side1 + side3 <= side2))  {
+  if ((isNaN(side1) || isNaN(side2) || isNaN(side3)) || 
+    (side1 + side2 <= side3 || side2 + side3 <= side1 || side1 + side3 <= side2)) {
     return "Not A Valid Triangle!";
   } else {
     return (side1 === side2 && side2 === side3) && 'Equilateral' ||
@@ -17,7 +18,16 @@ $(document).ready(function() {
     var side3 = parseFloat($('input#side_3').val());
 
     var result = triType(side1, side2, side3);
-    $(".result").text(result);
+
+    if (result === "Not A Valid Triangle!") {
+      $(".error").append('<strong> Warning! </strong>' + result);
+      $(".error").show();
+      $(".result").hide();
+    } else {
+      $(".result").append('<strong> Success! </strong>' + 'Your triangle type is:' + result);
+      $(".result").show();
+      $(".error").hide();
+    }
     $("#results").show();
   });
 });
